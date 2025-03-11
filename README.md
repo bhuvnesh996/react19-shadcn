@@ -1,3 +1,9 @@
-# React19-Tailwind4-Shadcn
+# ASSIGMENT FOR ME 
 
-A boilerplate of React Js 19 with vite v6, Tailwind v4 and Shadcn ui
+I did this assgigment in rush but i will try to improve it later on.  
+
+## How To Run
+```bash
+npm install
+npm run dev
+```

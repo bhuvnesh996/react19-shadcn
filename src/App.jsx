@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
-import { Button } from './components/ui/button'
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import EventsPage from './pages/EventsPage';
+import AboutPage from './pages/AboutPage';
 
-const App = () => {
-  const [count, setcount] = useState(0)
-
+function App() {
   return (
-    <div className='flex flex-col gap-4 h-screen w-screen justify-center items-center'>
-      <p className='text-2xl'>
-        Boilerplate of React Js 19 with vite v6, Tailwind v4 and Shadcn ui
-      </p>
-      <Button onClick={() => setcount((prev) => prev + 1)} size='lg'>
-        Count {count}
-      </Button>
-    </div>
-  )
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
